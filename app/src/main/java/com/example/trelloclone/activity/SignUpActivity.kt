@@ -14,12 +14,9 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        //This call the parent constructor
         super.onCreate(savedInstanceState)
-        // This is used to align the xml view to this class
         setContentView(R.layout.activity_sign_up)
 
-        // This is used to hide the status bar and make the splash screen as a full screen activity.
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
@@ -27,7 +24,6 @@ class SignUpActivity : BaseActivity() {
 
         setupActionBar()
 
-        // Click event for sign-up button.
         btn_sign_up.setOnClickListener {
             registerUser()
         }
@@ -60,9 +56,7 @@ class SignUpActivity : BaseActivity() {
 
                     if (task.isSuccessful) {
 
-                        // Firebase registered user
                         val firebaseUser: FirebaseUser = task.result!!.user!!
-                        // Registered Email
                         val registeredEmail = firebaseUser.email!!
 
                         Toast.makeText(
@@ -71,12 +65,7 @@ class SignUpActivity : BaseActivity() {
                             Toast.LENGTH_SHORT
                         ).show()
 
-                        /**
-                         * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
-                         * and send him to Intro Screen for Sign-In
-                         */
                         FirebaseAuth.getInstance().signOut()
-                        // Finish the Sign-Up Screen
                         finish()
                     } else {
                         Toast.makeText(
