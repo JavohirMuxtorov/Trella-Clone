@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/drawable/menu.xml" value="0.1325" />
+        <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/drawable/nav_header_main_background.xml" value="0.1325" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/drawable/shape_button_rounded.xml" value="0.133" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/drawable/white_border.xml" value="0.133" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/drawable/white_border_shape_button_rounded.xml" value="0.133" />
@@ -13,7 +15,11 @@
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/activity_sign_in.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/app_bar_main.xml" value="0.203125" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/dialog_progress.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/main_content.xml" value="0.203125" />
+        <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/nav_header_main.xml" value="0.203125" />
+        <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/menu/activity_main_drawer.xml" value="0.203125" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.133" />
       </map>
     </option>
