@@ -3,15 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.107" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/drawable/menu.xml" value="0.1325" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/drawable/nav_header_main_background.xml" value="0.1325" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/drawable/shape_button_rounded.xml" value="0.133" />
+        <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/drawable/white_back.xml" value="0.107" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/drawable/white_border.xml" value="0.133" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/drawable/white_border_shape_button_rounded.xml" value="0.133" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout-v23/activity_intro.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/activity_base.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/activity_intro.xml" value="0.18" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/activity_my_profile.xml" value="0.22" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/activity_sign_in.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/99890/AndroidStudioProjects/TrelloClone/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />

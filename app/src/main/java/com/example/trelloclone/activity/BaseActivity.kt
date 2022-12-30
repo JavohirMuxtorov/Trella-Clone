@@ -26,6 +26,7 @@ open class BaseActivity : AppCompatActivity() {
         mProgressDialog = Dialog(this)
         mProgressDialog.setContentView(R.layout.dialog_progress)
         mProgressDialog.tv_progress_text.text = text
+        mProgressDialog.show()
      }
     fun hideProgressDialog(){
         mProgressDialog.dismiss()
