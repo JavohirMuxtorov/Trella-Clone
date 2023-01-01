@@ -3,6 +3,7 @@ package com.example.trelloclone.firebase
 import android.app.Activity
 import android.util.Log
 import com.example.trelloclone.activity.MainActivity
+import com.example.trelloclone.activity.MyProfileActivity
 import com.example.trelloclone.activity.SignInActivity
 import com.example.trelloclone.activity.SignUpActivity
 import com.example.trelloclone.models.User
@@ -21,10 +22,10 @@ class FirestoreClass {
             }
             .addOnFailureListener {
                 e->
-                Log.e(activity.javaClass.simpleName, "error waiting for document")
+                Log.e(activity.javaClass.simpleName, "error waiting for document", e)
             }
     }
-    fun signInUser(activity: Activity) {
+    fun loadUserDate(activity: Activity) {
 
         // Here we pass the collection name from which we wants the data.
         mFireStore.collection(Constants.USERS)
@@ -40,6 +41,9 @@ class FirestoreClass {
                     }
                     is MainActivity ->{
                         activity.updateNavigationUserDetails(loggedInUser)
+                    }
+                    is MyProfileActivity ->{
+                        activity.setUserDataInUi(loggedInUser)
                     }
                 }
             }
