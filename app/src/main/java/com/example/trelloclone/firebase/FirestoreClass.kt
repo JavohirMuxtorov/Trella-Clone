@@ -2,6 +2,7 @@ package com.example.trelloclone.firebase
 
 import android.app.Activity
 import android.util.Log
+import android.widget.Toast
 import com.example.trelloclone.activity.MainActivity
 import com.example.trelloclone.activity.MyProfileActivity
 import com.example.trelloclone.activity.SignInActivity
@@ -24,6 +25,25 @@ class FirestoreClass {
                 e->
                 Log.e(activity.javaClass.simpleName, "error waiting for document", e)
             }
+    }
+    fun updateUserProfileData(activity: MyProfileActivity, userHashMap: HashMap<String, Any>){
+        mFireStore.collection(Constants.USERS)
+            // The document id to get the Fields of user.
+            .document(getCurrentUserId())
+            .update(userHashMap)
+            .addOnSuccessListener {
+                Log.i(activity.javaClass.simpleName, "Profile Data updated successfully!")
+                Toast.makeText(activity, "Profile Data updated successfully!", Toast.LENGTH_SHORT)
+                    .show()
+                activity.profileUpdatesSuccess()
+            }.addOnFailureListener {
+                e ->
+                activity.hideProgressDialog()
+                Log.e(activity.javaClass.simpleName, "Error while creating a board.",e)
+                Toast.makeText(activity, "Error when updating the profile!", Toast.LENGTH_SHORT)
+                    .show()
+            }
+
     }
     fun loadUserDate(activity: Activity) {
 

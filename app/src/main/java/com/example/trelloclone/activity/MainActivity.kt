@@ -1,7 +1,9 @@
 package com.example.trelloclone.activity
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.core.view.GravityCompat
 import com.bumptech.glide.Glide
@@ -15,10 +17,11 @@ import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
-//    lateinit var binding: ActivityMainBinding
+    companion object{
+        const val MY_PROFILE_REQUEST_CODE: Int = 11
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
     setupActionBar()
     nav_view.setNavigationItemSelectedListener(this)
@@ -56,10 +59,19 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             .into(nav_user_image)
         tv_username.text = user.name
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK && requestCode == MY_PROFILE_REQUEST_CODE){
+            FirestoreClass().loadUserDate(this)
+        }else{
+            Log.e("Cancelled","Cancelled")
+        }
+    }
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.nav_my_profile->{
-                startActivity(Intent(this, MyProfileActivity::class.java))
+                startActivityForResult(Intent(this, MyProfileActivity::class.java), MY_PROFILE_REQUEST_CODE)
             }
             R.id.nav_sign_out->{
                 FirebaseAuth.getInstance().signOut()
